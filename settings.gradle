@@ -1,0 +1,6 @@
+rootProject.name = "WebHtml"
+include ':app'
+include ':web'
+include ':base'
+include ':common'
+include ':login'
