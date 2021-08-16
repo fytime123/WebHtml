@@ -31,7 +31,7 @@
 			console.log("login.");
 			webxjs.takeNativeActionWithCallback("login",{}, function(res){
 			    var element = document.createElement("div");
-                element.appendChild(document.createTextNode("userName:"+res.accountName));
+                element.appendChild(document.createTextNode("userName:"+res.name+res.token));
                 document.getElementById('login_id').appendChild(element);
 			});
 		}
@@ -41,6 +41,6 @@
 <body style="height: 100%;">
 <div class="item" style="height: 40px;" onclick="callAppToast()">调用：showToast</div>
 <div class="item" style="height: 40px;" onclick="openActivity()">Open Activity</div>
-<div class="item" style="height: 40px;" onclick="login()">Login</div>
+<div class="item" id="login_id" style="height: 40px;" onclick="login()">Login</div>
 </body>
 </html>
